@@ -35,13 +35,11 @@ public class FileUploadController {
     }
 
     try {
-      // 파일 저장 (write to disk)
       File uploadFile = new File(fileFullPath);
       image.transferTo(uploadFile);
       return saveFilename;
 
     } catch (IOException e) {
-      // 예외 처리는 따로 해주는 게 좋습니다.
       throw new RuntimeException(e);
     }
   }

@@ -6,7 +6,7 @@ import java.util.List;
 public record PostRequest(
     String title,
     String content,
-    List<Long> categoryIds
+    List<String> categories
 ) {
 
 }
